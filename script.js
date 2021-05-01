@@ -11,7 +11,7 @@ const videos = [
     image: "./images/bleach.jpg"
     },
     {
-    title: "Rock Lee Vs Gaara - Number" ,
+    title: "Rock Lee Vs Gaara - Numb" ,
     url: "https://www.youtube.com/watch?v=EfP-fAF2G-8",
     time: "6min 38s",
     image: "./images/lee-vs-gaara.jpg"
@@ -27,7 +27,9 @@ const videos = [
 const showVideos = ()=> {
     videos.map( (video) => {
         let additionalCard = cardTemplate.cloneNode(true);
-        additionalCard.querySelector('a').href = video.url
+        additionalCard.querySelectorAll('a').forEach( link => {
+            link.href = video.url
+        }) 
         additionalCard.querySelector('img').src = video.image
         additionalCard.querySelector('img').alt = video.title
         additionalCard.querySelector('h3').textContent = video.title
