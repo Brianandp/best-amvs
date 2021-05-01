@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+#videosContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#card-template{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    background-color: blueviolet;
+    padding: 20px 5px; 
+    margin: 40px; 
+    text-align: center;
+}
+
+#card-template img {
+    width: 220px;
+}
