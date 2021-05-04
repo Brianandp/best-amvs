@@ -25,7 +25,7 @@ const videos = [
 ]
 
 const showVideos = ()=> {
-    videos.map( (video) => {
+    videos.forEach( (video) => {
         let additionalCard = cardTemplate.cloneNode(true);
         additionalCard.querySelectorAll('a').forEach( link => {
             link.href = video.url
